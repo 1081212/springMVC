@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" th:href="@{https://cdn.bootcss.com/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+  <style>
+    /* 登录页面样式 */
+    body {
+      background-image: url('https://himyvr.oss-cn-beijing.aliyuncs.com/admin/ship.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+
+    .login-box {
+      width: 320px;
+      margin: 100px auto;
+      margin-top: 70px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      color: #333;
+      text-shadow: 1px 1px #fff;
+      margin-bottom: 20px;
+    }
+
+    .login-box label {
+      display: block;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .login-box input[type="text"], .login-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .login-box input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+
+    .login-box input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+
+    .login-box a {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="text-center" style="font-family: -apple-system,BlinkMacSystemFont,Segoe; font-size: 36px; font-weight: bold; margin-bottom: 20px; margin-top: 50px">Shipping and Transaction</div>
+      <div class="login-box">
+        <h2>Login</h2>
+        <form th:action="@{/login}" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required minlength="5"
+                 title="Username must be at least 5 characters long">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required minlength="8"
+                 title="Password must be at least 8 characters long">
+
+          <input type="submit" value="Login">
+        </form>
+        <p class="text-center mt-3">Don't have an account? <a th:href="@{/toRegister}">Register here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

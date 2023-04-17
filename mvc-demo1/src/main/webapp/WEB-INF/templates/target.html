@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>target</title>
+    <!-- 引入Bootstrap样式表 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-Hello World
+<div class="container"> <!-- 添加Bootstrap容器样式 -->
+    <table class="table"> <!-- 添加Bootstrap表格样式 -->
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div> <!-- 添加Bootstrap容器样式结束 -->
+<!-- 引入Bootstrap JS文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
