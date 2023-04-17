@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>target</title>
-    <!-- 引入Bootstrap样式表 -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>HELLO，AMAP!</title>
+    <style>
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-<div class="container"> <!-- 添加Bootstrap容器样式 -->
-    <table class="table"> <!-- 添加Bootstrap表格样式 -->
-        <thead>
-        <tr>
-            <th>Username</th>
-            <th>Password</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="user : ${userList}">
-            <td th:text="${user.username}"></td>
-            <td th:text="${user.password}"></td>
-        </tr>
-        </tbody>
-    </table>
-</div> <!-- 添加Bootstrap容器样式结束 -->
-<!-- 引入Bootstrap JS文件 -->
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="container"></div>
 </body>
 </html>
+
+<script type="text/javascript">
+    window._AMapSecurityConfig = {
+        securityJsCode:"110f932d81e9a79f6b65904d65232eac",
+    }
+</script>
+<script src="https://webapi.amap.com/loader.js"></script>
+<script type="text/javascript" >
+    AMapLoader.load({
+        key: "1993e65b003190c42a731959733290ac",       // 申请好的Web端开发者Key，首次调用 load 时必填
+        version: "2.0",                 // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+    }).then((AMap)=>{
+        const map = new AMap.Map('container');
+    }).catch((e)=>{
+        console.error(e);  //加载错误提示
+    });
+
+    const marker = new AMap.Marker({
+        position:[116.39, 39.9] //位置
+    })
+    map.add(marker); //添加到地图
+
+    // 创建信息窗体
+    const infoWindow = new AMap.InfoWindow({
+        isCustom: true,  // 使用自定义窗体
+        content: '<div>HELLO,AMAP!</div>', // 信息窗体的内容可以是任意 html 片段
+        offset: new AMap.Pixel(16, -45)
+    });
+    const onMarkerClick = function(e) {
+        infoWindow.open(map, e.target.getPosition()); // 打开信息窗体
+        // e.target 就是被点击的 Marker
+    }
+
+    const marker = new AMap.Marker({
+        position: [116.481181, 39.989792]
+    })
+    map.add(marker);
+    marker.on('click', onMarkerClick); // 绑定 click 事件
+
+    const lineArr = [
+        [116.368904, 39.913423],
+        [116.382122, 39.901176],
+        [116.387271, 39.912501],
+        [116.398258, 39.904600]
+    ];
+    const polyline = new AMap.Polyline({
+        path: lineArr,          // 设置线覆盖物路径
+        strokeColor: "#3366FF", // 线颜色
+        strokeWeight: 5,        // 线宽
+        strokeStyle: "solid",   // 线样式
+    });
+    map.add(polyline);
+</script>
