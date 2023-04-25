@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>货源信息页面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">车源信息</a>
+    <a class="navbar-brand" href="#">货源信息</a>
+</nav>
+<div class="container-fluid my-4" id="cards-container">
+    <!-- 打印 page 变量的内容 -->
+<!--    <div th:if="${page}">-->
+<!--        <p>page变量的内容是: [[${page}]]</p>-->
+<!--    </div>-->
+
+    <!-- 使用Thymeleaf迭代器循环ship列表 -->
+    <div class="row">
+        <div class="card-columns" id="ship-cards-container">
+            <div class="card" th:each="ship, iterStat : ${page.list}" onmouseenter="this.querySelector('.card-body .info').style.display='none'; this.querySelector('.card-body .info1').style.display='none';this.querySelector('.card-body .info2').style.display='none';this.querySelector('.card-body .info3').style.display='none';this.querySelector('.card-body .link').style.display='block';" onmouseleave="this.querySelector('.card-body .info').style.display='block'; this.querySelector('.card-body .info1').style.display='block';this.querySelector('.card-body .info2').style.display='block';this.querySelector('.card-body .info3').style.display='block';this.querySelector('.card-body .link').style.display='none';">
+                <div class="card-body" style="min-height: 300px;width: 200px">
+                    <h5 class="card-title" th:text="${ship.name}"></h5>
+                    <p class="card-text info" th:text="${ship.phone}"></p>
+                    <p class="card-text info1" th:text="${ship.shipModel}"></p>
+                    <p class="card-text info2" th:text="${ship.shipLength}"></p>
+                    <p class="card-text info3" th:text="${ship.load}"></p>
+                    <a th:href="@{/ship/details(id=${ship.id})}" class="stretched-link link" style="display:none;" >前往详情页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 添加分页功能 -->
+    <nav>
+        <ul class="pagination justify-content-center">
+            <!-- 显示“上一页”按钮 -->
+            <li class="page-item" th:classappend="${page.pageNum == 1} ? disabled">
+                <a class="page-link" th:href="${page.hasPreviousPage} ? @{/ship/getAll(pageNum=${page.prePage})} : null">&laquo;</a>
+            </li>
+
+            <!-- 使用Thymeleaf迭代器循环生成分页按钮 -->
+            <li class="page-item" th:each="pageNumber : ${page.pageNum}" th:classappend="${pageNumber == page.pageNum} ? active">
+                <a class="page-link" th:href="@{/ship/getAll(page=${pageNum})}" th:text="${pageNumber}"></a>
+            </li>
+
+            <!-- 显示“下一页”按钮 -->
+            <li class="page-item" th:classappend="${page.pageNum == page.pages} ? disabled">
+                <a class="page-link" th:href="${page.hasNextPage} ? @{/ship/getAll(pageNum=${page.nextPage})} : null">&raquo;</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<style>
+    .card-columns .card {
+        display: inline-block;
+        width: 60%;
+        margin: 70px;
+    }
+</style>
+
+<!-- 使用Thymeleaf表达式动态计算方框 -->
+<script th:inline="javascript">
+    $(function () {
+        var numberOfCards = [[${#lists.size(page.list)}]];
+        var numberOfColumns = 3; // 每行显示的方框数量
+        var numberOfCardsInLastRow = numberOfCards % numberOfColumns; // 最后一行方框的数量
+        var numberOfRows = Math.floor(numberOfCards / numberOfColumns) + (numberOfCardsInLastRow > 0 ? 1 : 0); // 总行数
+        var rowTemplate = '<div class="row"></div>';
+        var cardColumnTemplate = '<div class="col-md-4 mb-4"></div>';
+        var lastRowNumberOfColumns = numberOfCardsInLastRow === 0 ? numberOfColumns : numberOfCardsInLastRow;
+
+        for (var i = 1; i <= numberOfRows; i++) {
+            var row = $(rowTemplate);
+            var numberOfColumnsInThisRow = i === numberOfRows ? lastRowNumberOfColumns : numberOfColumns;
+            for (var j = 1; j <= numberOfColumnsInThisRow; j++) {
+                row.append($(cardColumnTemplate));
+            }
+            $('.container-fluid .row').append(row);
+        }
+    });
+    // $(document).ready(function() {
+    //     $('.card-body').hover(
+    //         function() {
+    //             $(this).append('<span class="go-to-detail">前往详情页</span>');
+    //         },
+    //         function() {
+    //             $(this).find('.go-to-detail').remove();
+    //         }
+    //     );
+    // });
+</script>
+</body>
+</html>
