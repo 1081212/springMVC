@@ -82,11 +82,17 @@ public class UserController {
             session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
                     SecurityContextHolder.getContext());
 
-            return "index";
+            return "redirect:/ship/getAll";
         } catch (Exception e) {
             model.addAttribute("loginError", "用户名或密码错误！");
-            return "target";
+            return "forward:/login";
         }
+    }
+
+    @RequestMapping("/toLogin")
+    public String toLogin(Model model){
+        model.addAttribute("falseLogin","false");
+        return "login";
     }
 
     @PostMapping("/register")
