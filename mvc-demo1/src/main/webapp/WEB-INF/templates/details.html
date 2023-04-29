@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>船只信息</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script>
+        function populateSelect(elementId, data) {
+            const selectElement = document.getElementById(elementId);
+            selectElement.innerHTML = "";
+            for (const item of data.districts) {
+                const optionElement = document.createElement("option");
+                optionElement.value = item.adcode;
+                optionElement.textContent = item.name;
+                selectElement.appendChild(optionElement);
+            }
+        }
+
+        function fetchCities(adcode) {
+            fetch(`https://restapi.amap.com/v3/config/district?subdistrict=2&key=17b386858d3fc4db7abedacdba86c819&keywords=${adcode}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    populateSelect("city", data.districts[0]);
+                })
+                .catch((error) => {
+                    console.error("Error fetching cities:", error);
+                });
+        }
+
+        function fetchECities(adcode) {
+            fetch(`https://restapi.amap.com/v3/config/district?subdistrict=2&key=17b386858d3fc4db7abedacdba86c819&keywords=${adcode}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    populateSelect("e_city", data.districts[0]);
+                })
+                .catch((error) => {
+                    console.error("Error fetching cities:", error);
+                });
+        }
+
+        function fetchProvinces() {
+            fetch(`https://restapi.amap.com/v3/config/district?subdistrict=1&key=17b386858d3fc4db7abedacdba86c819`)
+                .then((response) => response.json())
+                .then((data) => {
+                    // console.log(data);
+                    // console.log(data.districts);
+                    populateSelect("province", data.districts[0]);
+                    populateSelect("e_province", data.districts[0]);
+                })
+                .catch((error) => {
+                    console.error("Error fetching provinces:", error);
+                });
+        }
+
+        fetchProvinces();
+
+
+    </script>
+
+
+</head>
+<body>
+<!--    <div th:if="${ship}">-->
+<!--        <p>ship变量的内容是: [[${ship}]]</p>-->
+<!--    </div>-->
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://himyvr.oss-cn-beijing.aliyuncs.com/admin/ship.png" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">船只信息</h5>
+                    <hr>
+                    <p class="card-text">联系人: <span th:text="${ship.name}">联系人姓名</span></p>
+                    <hr>
+                    <p class="card-text">电话: <span th:text="${ship.phone}">联系电话</span></p>
+                    <hr>
+                    <p class="card-text">船类型: <span th:text="${ship.shipModel}">船只类型</span></p>
+                    <hr>
+                    <p class="card-text">船长(米): <span th:text="${ship.shipLength}">船只长度</span></p>
+                    <hr>
+                    <p class="card-text">载重(吨): <span th:text="${ship.load}">最大载重</span></p>
+                    <hr>
+                    <p class="card-text" id="price">运价(元/吨): <span th:text="${ship.price}">运价</span></p>
+                </div>
+                <!-- 弹窗 -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">填写发货人信息</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="myForm" onsubmit="return onSubmitForm()" th:action="@{/order/save}" method="post">
+                                    <input type="hidden" id="shipId" name="shipId" th:value="${ship.shipId}">
+                                    <input type="hidden" id="uid" name="uid" th:value="${uid}">
+                                    <div class="form-group">
+                                        <label for="name">姓名</label>
+                                        <input type="text" class="form-control" id="name" name="trueName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">电话</label>
+                                        <input type="tel" class="form-control" id="phone" name="truePhone" required>
+                                    </div>
+
+                                    <!--                                    起点-->
+                                    <div class="form-group">
+                                        <label for="province">起始省份</label>
+                                        <select class="form-control" id="province" name="startProvinceAdcode" required>
+                                            <option value="">请选择</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="city">起始城市</label>
+                                        <select class="form-control" id="city" name="startCityAdcode" required>
+                                            <option value="">请选择</option>
+                                        </select>
+                                    </div>
+                                    <!--终点-->
+                                    <div class="form-group">
+                                        <label for="e_province">到达省份</label>
+                                        <select class="form-control" id="e_province" name="endProvinceAdcode" required>
+                                            <option value="">请选择</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="e_city">到达城市</label>
+                                        <select class="form-control" id="e_city" name="endCityAdcode" required>
+                                            <option value="">请选择</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="weight">发货重量</label>
+                                        <input type="number" class="form-control" id="weight" name="weight" step="0.01" min="0" th:max="${ship.load}" pattern="^\d+(\.\d{1,2})?$" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="totalPrice">价格</label>
+                                        <input type="number" class="form-control" id="totalPrice" name="totalPrice" readonly>
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="submit" class="btn btn-primary" form="myForm">确定</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+            <a href="#myModal" class="btn btn-primary" data-toggle="modal" style="margin-top: 50px;  width: 538px;">选这个船</a>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+<script>
+    document.getElementById("province").addEventListener("change", (event) => {;
+        const adcode = event.target.value;
+        fetchCities(adcode);
+    });
+
+    document.getElementById("e_province").addEventListener("change", (event) => {
+        const adcode = event.target.value;
+        fetchECities(adcode);
+    });
+
+    document.getElementById("weight").addEventListener("change", (event) => {
+        console.log("change");
+        const weight = event.target.value;
+        console.log("weight"+weight);
+        var price = document.getElementById("price").textContent;
+        var priceValue = price.split(":").pop().trim();
+        var totalPrice = priceValue*weight;
+        console.log("price:"+priceValue);
+        console.log("totalPrice",totalPrice);
+        const selectElement = document.getElementById("totalPrice");
+        selectElement.value = totalPrice.toFixed(2);
+
+    });
+
+    function onSubmitForm() {
+        var x = document.getElementById("myForm");
+        console.log(x);
+
+        return true; // submit the form
+    }
+
+
+</script>
+
