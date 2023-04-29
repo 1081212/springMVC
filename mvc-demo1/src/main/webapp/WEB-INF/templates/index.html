@@ -1,11 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .card {
+            border-radius: 10px;
+        }
+        .form-control, .btn {
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+
+    </script>
 </head>
 <body>
-<h1>首页</h1>
+<div class="container mt-5">
+    <div th:if="${suc}">
+        <script th:inline="javascript">
+            alert('操作成功！');
+            location.reload();
+        </script>
+    </div>
 
+    <h1 class="mb-4 text-center">Order Management</h1>
+    <div class="card p-4 mb-5">
+        <form th:action="@{/order/get}" method="post" class="form-inline justify-content-center">
+            <div class="form-group mr-2">
+                <label for="orderId" class="mr-1">运单ID:</label>
+                <input type="text" class="form-control" id="orderId" name="orderId" placeholder="Enter Order ID">
+            </div>
+            <div class="form-group mr-2">
+                <label for="startProvince" class="mr-1">起始省份:</label>
+                <input type="text" class="form-control" id="startProvince" name="startProvince" placeholder="Enter Start Province">
+            </div>
+            <div class="form-group mr-2">
+                <label for="startCity" class="mr-1">起始城市:</label>
+                <input type="text" class="form-control" id="startCity" name="startCity" placeholder="Enter Start City">
+            </div>
+            <button type="submit" class="btn btn-primary">查询</button>
+        </form>
+    </div>
+
+    <div class="card p-4">
+        <table class="table mt-4">
+            <thead>
+            <tr>
+                <th>运单ID</th>
+                <th>起始省份</th>
+                <th>到达省份</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.orderId}"></td>
+                <td th:text="${order.startProvinceAdcode}"></td>
+                <td th:text="${order.endProvinceAdcode}"></td>
+                <td>
+                    <button type="button" class="btn btn-info mr-2" th:attr="data-toggle='modal', data-target='#detailsModal'+${order.orderId}">详细信息</button>
+                    <button type="button" class="btn btn-primary" th:onclick="'dispatchOrder('+${order.orderId}+')'">派单</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div th:each="order : ${orders}">
+            <!-- Details Modal -->
+            <div class="modal fade" th:id="'detailsModal'+${order.orderId}" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detailsModalLabel">Order Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p th:text="'运单号: ' + ${order.orderId}"></p>
+                            <p th:text="'运货人姓名: ' + ${order.trueName}"></p>
+                            <p th:text="'运货人电话: ' + ${order.truePhone}"></p>
+                            <p th:text="'选择运船: ' + ${order.shipId}"></p>
+                            <p th:text="'起始省份: ' + ${order.startProvinceAdcode}"></p>
+                            <p th:text="'起始城市: ' + ${order.startCityAdcode}"></p>
+                            <p th:text="'到达省份: ' + ${order.endProvinceAdcode}"></p>
+                            <p th:text="'到达城市: ' + ${order.endCityAdcode}"></p>
+                            <p th:text="'重量: ' + ${order.weight}"></p>
+                            <p th:text="'总价格: ' + ${order.totalPrice}"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
+
+    <script>
+        function dispatchOrder(orderId) {
+            console.log(orderId);
+            fetch('http://localhost:8080/springMVC/order/dispatch?orderId='+orderId, {
+                method: 'PATCH',
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Order dispatched successfully');
+                        alert("操作成功！");
+                        location.reload();
+                    } else {
+                        console.log('Failed to dispatch order');
+                    }
+                })
+                .catch(error => {
+                    console.error('Failed to dispatch order', error);
+                });
+
+        }
+    </script>
+
 </html>
