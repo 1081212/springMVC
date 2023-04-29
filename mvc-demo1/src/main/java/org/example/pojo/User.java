@@ -3,24 +3,13 @@ package org.example.pojo;
 import org.springframework.security.core.parameters.P;
 
 public class User {
-    Integer id;
+    Integer uid;
     String username;
     String password;
 
     String enabled;
 
     String role;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", enabled='" + enabled + '\'' +
-                ", role='" + role + '\'' +
-                '}';
-    }
 
     public void setEnabled(String enabled) {
         this.enabled = enabled;
@@ -38,8 +27,23 @@ public class User {
         return role;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "User{" +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled='" + enabled + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+    }
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
+    }
+
+    public Integer getUid() {
+        return uid;
     }
 
     public void setUsername(String username) {
@@ -50,9 +54,7 @@ public class User {
         this.password = password;
     }
 
-    public Integer getId() {
-        return id;
-    }
+
 
     public String getUsername() {
         return username;

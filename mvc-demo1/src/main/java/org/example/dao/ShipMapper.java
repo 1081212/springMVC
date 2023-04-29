@@ -10,4 +10,6 @@ public interface ShipMapper {
         int countAllShip();
         List<Ship> getShipsByPage(@Param("start") int start, @Param("pageSize") int pageSize);
 
+        Ship getShipById(Integer id);
+
 }

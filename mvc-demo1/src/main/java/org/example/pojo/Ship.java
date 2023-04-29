@@ -1,24 +1,16 @@
 package org.example.pojo;
 
 public class Ship {
-    Integer id;
+    Integer shipId;
     String name;
     String phone;
     String shipModel;
     Double shipLength;
     Double load;
 
-    @Override
-    public String toString() {
-        return "Ship{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", shipModel='" + shipModel + '\'' +
-                ", shipLength=" + shipLength +
-                ", load=" + load +
-                '}';
-    }
+    Double price;
+
+
 
     public void setName(String name) {
         this.name = name;
@@ -52,12 +44,33 @@ public class Ship {
         return shipModel;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Ship{" +
+                "shipId=" + shipId +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", shipModel='" + shipModel + '\'' +
+                ", shipLength=" + shipLength +
+                ", load=" + load +
+                ", price=" + price +
+                '}';
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getShipId() {
+        return shipId;
+    }
+
+    public void setShipId(Integer shipId) {
+        this.shipId = shipId;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public Double getShipLength() {

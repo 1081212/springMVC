@@ -17,5 +17,9 @@
         SELECT * FROM ship LIMIT #{start}, #{pageSize}
     </select>
 
+    <select id="getShipById" resultType="org.example.pojo.Ship">
+        SELECT * FROM ship WHERE shipId = #{id}
+    </select>
+
 
 </mapper>

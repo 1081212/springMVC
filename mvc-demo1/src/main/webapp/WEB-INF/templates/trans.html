@@ -6,34 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">车源信息</a>
-    <a class="navbar-brand" href="#">货源信息</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
+    <a class="navbar-brand" href="#" style="margin-left: 30px;">
+        <img src="https://himyvr.oss-cn-beijing.aliyuncs.com/mvcImg/logo.png" alt="Clickable Image"
+             style="max-height: 70px;  object-fit: contain;">
+    </a>
+    <div class="ml-auto">
+        <a class="navbar-brand" href="#">船源信息</a>
+        <a class="navbar-brand" href="#">货源信息</a>
+    </div>
 </nav>
+
+
 <div class="container-fluid my-4" id="cards-container">
     <!-- 打印 page 变量的内容 -->
-<!--    <div th:if="${page}">-->
-<!--        <p>page变量的内容是: [[${page}]]</p>-->
-<!--    </div>-->
+    <!--    <div th:if="${page}">-->
+    <!--        <p>page变量的内容是: [[${page}]]</p>-->
+    <!--    </div>-->
 
     <!-- 使用Thymeleaf迭代器循环ship列表 -->
     <div class="row">
         <div class="card-columns" id="ship-cards-container">
-            <div class="card" th:each="ship, iterStat : ${page.list}" onmouseenter="this.querySelector('.card-body .info').style.display='none'; this.querySelector('.card-body .info1').style.display='none';this.querySelector('.card-body .info2').style.display='none';this.querySelector('.card-body .info3').style.display='none';this.querySelector('.card-body .link').style.display='block';" onmouseleave="this.querySelector('.card-body .info').style.display='block'; this.querySelector('.card-body .info1').style.display='block';this.querySelector('.card-body .info2').style.display='block';this.querySelector('.card-body .info3').style.display='block';this.querySelector('.card-body .link').style.display='none';">
-                <div class="card-body" style="min-height: 300px;width: 200px">
-                    <h5 class="card-title" th:text="${ship.name}"></h5>
-                    <p class="card-text info" th:text="${ship.phone}"></p>
-                    <p class="card-text info1" th:text="${ship.shipModel}"></p>
-                    <p class="card-text info2" th:text="${ship.shipLength}"></p>
-                    <p class="card-text info3" th:text="${ship.load}"></p>
-                    <a th:href="@{/ship/details(id=${ship.id})}" class="stretched-link link" style="display:none;" >前往详情页</a>
+            <div class="card" th:each="ship, iterStat : ${page.list}" onmouseenter="this.querySelector('.card-body .card-info').style.display='none';
+                                                                                    this.querySelector('.card-body .card-info1').style.display='none';
+                                                                                    this.querySelector('.card-body .info1').style.display='none';
+                                                                                    this.querySelector('.card-body .info2').style.display='none';
+                                                                                    this.querySelector('.card-body .info3').style.display='none';
+                                                                                    this.querySelector('.card-body .link').style.display='block';"
+                 onmouseleave="this.querySelector('.card-body .card-info').style.display='flex';
+                                                                                        this.querySelector('.card-body .card-info1').style.display='flex';
+                                                                                        this.querySelector('.card-body .info1').style.display='block';
+                                                                                        this.querySelector('.card-body .info2').style.display='block';
+                                                                                        this.querySelector('.card-body .info3').style.display='block';
+                                                                                        this.querySelector('.card-body .link').style.display='none';">
+                <div class="card-body" style="min-height: 330.6px;width: 294px;padding: 2rem">
+                    <div class="people-ship">
+                        <img src="https://himyvr.oss-cn-beijing.aliyuncs.com/admin/ship-icon.png" alt="Ship Image" class="ship-ico">
+                    </div>
+                    <div class="card-info">
+                        <img src="https://www.zczy56.com/statics/images/new_images/user_ico.png" alt="Name Image" class="card-img">
+                        <h3 class="card-title" th:text="${ship.name}"></h3>
+                    </div>
+                    <div class="card-info1">
+                        <img src="	https://www.zczy56.com/statics/images/new_images/call_ico.png" alt="Phone Image" class="card-img">
+                        <p class="card-text info" th:text="${ship.phone}"></p>
+                    </div>
+                    <p class="card-text info1" th:text="'船体类型: ' + ${ ship.shipModel}"></p>
+                    <p class="card-text info2" th:text="'船体长度: ' + ${ship.shipLength} + ' 米'"></p>
+                    <p class="card-text info3" th:text="'载重: ' + ${ship.load} + ' 吨'"></p>
+                    <a th:href="@{/ship/details(shipId=${ship.shipId},uid = ${user.uid})}" class="stretched-link link" style="display:none;">前往详情页</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--    原来的-->
+    <!--    <div class="card" th:each="ship, iterStat : ${page.list}" onmouseenter="this.querySelector('.card-body .info').style.display='none'; this.querySelector('.card-body .info1').style.display='none';this.querySelector('.card-body .info2').style.display='none';this.querySelector('.card-body .info3').style.display='none';this.querySelector('.card-body .link').style.display='block';" onmouseleave="this.querySelector('.card-body .info').style.display='block'; this.querySelector('.card-body .info1').style.display='block';this.querySelector('.card-body .info2').style.display='block';this.querySelector('.card-body .info3').style.display='block';this.querySelector('.card-body .link').style.display='none';">-->
+    <!--        <div class="card-body" style="min-height: 300px;width: 200px">-->
+    <!--            <h5 class="card-title" th:text="${ship.name}"></h5>-->
+    <!--            <p class="card-text info" th:text="${ship.phone}"></p>-->
+    <!--            <p class="card-text info1" th:text="${ship.shipModel}"></p>-->
+    <!--            <p class="card-text info2" th:text="${ship.shipLength}"></p>-->
+    <!--            <p class="card-text info3" th:text="${ship.load}"></p>-->
+    <!--            <a th:href="@{/ship/details(id=${ship.id})}" class="stretched-link link" style="display:none;" >前往详情页</a>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+    <!--    改的-->
+    <!--    <div class="card-body" style="min-height: 300px;width: 200px">-->
+    <!--        <div class="card-info">-->
+    <!--            <img src="https://www.zczy56.com/statics/images/new_images/user_ico.png" alt="Name Image" class="card-img">-->
+    <!--            <h5 class="card-title" th:text="${ship.name}"></h5>-->
+    <!--        </div>-->
+    <!--        <div class="card-info">-->
+    <!--            <img src="	https://www.zczy56.com/statics/images/new_images/call_ico.png" alt="Phone Image" class="card-img">-->
+    <!--            <p class="card-text info" th:text="${ship.phone}"></p>-->
+    <!--        </div>-->
+    <!--        <p class="card-text info1" th:text="${ship.shipModel}"></p>-->
+    <!--        <p class="card-text info2" th:text="${ship.shipLength}"></p>-->
+    <!--        <p class="card-text info3" th:text="${ship.load}"></p>-->
+    <!--        <a th:href="@{/ship/details(id=${ship.id})}" class="stretched-link link" style="display:none;">前往详情页</a>-->
+    <!--    </div>-->
+
 
 
 
@@ -61,10 +121,57 @@
 </div>
 
 <style>
+    .bg-light {
+        background-color: #efeaea!important;
+    }
+
     .card-columns .card {
         display: inline-block;
         width: 60%;
         margin: 70px;
+    }
+
+    .card-info {
+        display: flex; /* 将子元素放在一行中 */
+        align-items: center; /* 垂直居中元素 */
+        margin-bottom: 0.5rem; /* 添加底部间距 */
+    }
+
+    .card-info1 {
+        display: flex; /* 将子元素放在一行中 */
+        align-items: center; /* 垂直居中元素 */
+        margin-bottom: 0.5rem; /* 添加底部间距 */
+    }
+
+    .card-img {
+        width: 20px; /* 设置图像的宽度 */
+        height: auto; /* 根据图像比例自适应高度 */
+        margin-right: 0.5rem; /* 添加文本和图像之间的间距 */
+    }
+
+    .card-title {
+        margin: 0; /* 去掉标题和文本的默认上下间距 */
+    }
+    .card-text.info {
+        margin: 0; /* 去掉标题和文本的默认上下间距 */
+        font-size: 20px;
+        color: #fc8f00;
+    }
+
+    .people-ship {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .ship-ico {
+        width: 52px;
+        height: 52px;
+        display: inline-block;
+    }
+
+    a.stretched-link.link {
+        text-align: center;
+        padding-top: 30px;
     }
 </style>
 
@@ -72,7 +179,7 @@
 <script th:inline="javascript">
     $(function () {
         var numberOfCards = [[${#lists.size(page.list)}]];
-        var numberOfColumns = 3; // 每行显示的方框数量
+        var numberOfColumns = 4; // 每行显示的方框数量
         var numberOfCardsInLastRow = numberOfCards % numberOfColumns; // 最后一行方框的数量
         var numberOfRows = Math.floor(numberOfCards / numberOfColumns) + (numberOfCardsInLastRow > 0 ? 1 : 0); // 总行数
         var rowTemplate = '<div class="row"></div>';
@@ -88,6 +195,7 @@
             $('.container-fluid .row').append(row);
         }
     });
+
     // $(document).ready(function() {
     //     $('.card-body').hover(
     //         function() {

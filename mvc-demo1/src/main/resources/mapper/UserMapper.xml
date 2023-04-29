@@ -6,7 +6,7 @@
 <mapper namespace="org.example.dao.UserMapper">
 
     <select id="getUserById" resultType="org.example.pojo.User">
-        SELECT * FROM user WHERE id = #{id}
+        SELECT * FROM user WHERE uid = #{id}
     </select>
 
     <select id="getAllUser" resultType="org.example.pojo.User">
@@ -20,6 +20,8 @@
     <insert id="insertUser" parameterType="org.example.pojo.User">
         INSERT INTO user (username, password) VALUES (#{username}, #{password})
     </insert>
+
+
 
 
 </mapper>
