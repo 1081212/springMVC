@@ -26,11 +26,11 @@
 
 #### 	1.1 UserMapperTest
 
-<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181449862.png" alt="image-20230430181449862" style="zoom:67%;" />
+<img src="https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181449862.png" alt="image-20230430181449862" style="zoom:67%;" />
 
 #### 	1.2 ShipMapperTest
 
-<img src="https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181420398.png" alt="image-20230430181420398" style="zoom:67%;" />
+<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181420398.png" alt="image-20230430181420398" style="zoom:67%;" />
 
 #### 	1.3 OrderMapperTest
 
@@ -40,13 +40,13 @@
 
 #### 	1.1 UserControllerTest
 
-<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181731523.png" alt="image-20230430181731523" style="zoom:67%;" />
+<img src="https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181731523.png" alt="image-20230430181731523" style="zoom:67%;" />
 
 #### 	1.2 ShipControllerTest
 
-<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181706467.png" alt="image-20230430181706467" style="zoom:67%;" />
+<img src="https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181706467.png" alt="image-20230430181706467" style="zoom:67%;" />
 
 #### 	1.3 OrderControllerTest
 
-<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181646496.png" alt="image-20230430181646496" style="zoom:67%;" />
+<img src="https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181646496.png" alt="image-20230430181646496" style="zoom:67%;" />
 
