@@ -34,7 +34,7 @@
 
 #### 	1.3 OrderMapperTest
 
-<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181355769.png" alt="image-20230430181355769" style="zoom:67%;" />
+![image](https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181355769.png)
 
 ### 2、Controller层集成测试Test结果
 
