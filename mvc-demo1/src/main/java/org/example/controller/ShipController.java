@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -28,7 +29,7 @@ public class ShipController {
 
 
     @RequestMapping("/getAll")
-    public String getAllShips(Model model, @RequestParam(defaultValue = "1") int pageNum, Authentication authentication) throws Exception {
+    public String getAllShips(Model model, @RequestParam(defaultValue = "1") int pageNum, @RequestBody Authentication authentication) throws Exception {
         try (SqlSession sqlSession = sqlSessionFactory.getObject().openSession()) {
             String username = authentication.getName();
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
@@ -103,7 +104,7 @@ public class ShipController {
         }
     }
 
-    @RequestMapping("/details")
+    @RequestMapping("/detail")
     public String details(Model model, @RequestParam(defaultValue = "1") Integer shipId,@RequestParam Integer uid) throws Exception {
         try (SqlSession sqlSession = sqlSessionFactory.getObject().openSession()) {
             ShipMapper shipMapper = sqlSession.getMapper(ShipMapper.class);

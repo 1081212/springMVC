@@ -8,14 +8,11 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/order")
 public class OrderController {
 
@@ -23,8 +20,9 @@ public class OrderController {
     private SqlSessionFactoryBean sqlSessionFactory;
 
     @PostMapping("/save")
-    public String saveOrder(Model model, Order order) throws Exception {
+    public String saveOrder(Model model, @RequestBody Order order) throws Exception {
         try (SqlSession sqlSession = sqlSessionFactory.getObject().openSession()) {
+            System.out.println("test:"+order.toString());
             OrderMapper orderMapper = sqlSession.getMapper(OrderMapper.class);
             orderMapper.insertOrder(order);
             return "redirect:/ship/RegetAll?pageNum=1&uid="+order.getUid();
