@@ -30,7 +30,7 @@
 
 #### 	1.2 ShipMapperTest
 
-<img src="C:%5CUsers%5C31525%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230430181420398.png" alt="image-20230430181420398" style="zoom:67%;" />
+<img src="https://github.com/1081212/springMVC/blob/master/readme-image/image-20230430181420398.png" alt="image-20230430181420398" style="zoom:67%;" />
 
 #### 	1.3 OrderMapperTest
 
