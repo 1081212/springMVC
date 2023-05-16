@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.javaee2.dao.ShipMapper">
+
+    <select id="getAllShip" resultType="com.example.javaee2.pojo.Ship">
+        SELECT * FROM ship
+    </select>
+
+    <select id="countAllShip" resultType="int">
+        SELECT COUNT(*) FROM ship
+    </select>
+
+    <select id="getShipsByPage" resultType="com.example.javaee2.pojo.Ship">
+        SELECT * FROM ship LIMIT #{start}, #{pageSize}
+    </select>
+
+    <select id="getShipById" resultType="com.example.javaee2.pojo.Ship">
+        SELECT * FROM ship WHERE shipId = #{id}
+    </select>
+
+
+</mapper>
