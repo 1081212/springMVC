@@ -689,7 +689,6 @@ admin-server均调用其他微服务，无repo层。
 
 - zookeeper kafka携带版
 
-  上述所提压缩包均已经上传至master分支。
 
 2、如项目出现
 
@@ -709,7 +708,9 @@ File->Project Structure->Modules->对应的server->Dependencies-> <Module source
 
 选择需要的模块并ok、apply、ok即可。
 
-3、感谢所学，收获颇多。
+3、数据库文件已上传至master分支，##作业一、二使用ship.sql，作业三、四使用ship2.sql##
+
+4、感谢所学，收获颇多。
 
   
 
