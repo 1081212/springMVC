@@ -1,0 +1,36 @@
+#端口号
+server:
+  port: 8079
+#nacos的注册地址和配置地址
+spring:
+  redis:
+    host: 127.0.0.1
+    database: 3
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+    #开启sentinel
+    sentinel:
+      enabled: true
+      transport:
+        dashboard: 127.0.0.1:8849 # 连接dashboard
+        port: 8719
+  #服务名称
+  application:
+    name: auth-server
+  datasource:
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/csbms?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#开启feign的降级
+feign:
+  hystrix:
+    enabled: true
+#mybaits配置
+mybatis:
+  type-aliases-package: org.example.authserver.entity
+  mapper-locations: classpath:mapper/*.xml

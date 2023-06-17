@@ -1,0 +1,30 @@
+#端口号
+server:
+  port: 8082
+#nacos的注册地址和配置地址
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+    #开启sentinel
+    sentinel:
+      enabled: true
+      transport:
+        dashboard: 127.0.0.1:8849 # 连接dashboard
+        port: 8719
+  #服务名称
+  application:
+    name: admin-server
+#开启feign的降级
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  file:
+    name: logs/user-server.log
+    max-size: 20MB
+    max-history: 1500
