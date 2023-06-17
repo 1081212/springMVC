@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.orderserver.mapper.OrderMapper">
+    <insert id="insertOrder" parameterType="org.example.orderserver.entity.Order">
+        insert into `order`(uid,trueName,truePhone,startProvinceAdcode,startCityAdcode,endProvinceAdcode,endCityAdcode,weight,totalPrice,level)
+            VALUES (#{uid},#{trueName},#{truePhone},#{startProvinceAdcode},#{startCityAdcode},#{endProvinceAdcode},#{endCityAdcode},#{weight},#{totalPrice},#{level})
+    </insert>
+    <select id="getNoGo" resultType="org.example.orderserver.entity.Order">
+        SELECT * FROM `order` WHERE isGo = 0
+    </select>
+    <update id="updateIsGo" parameterType="int">
+        UPDATE `order` SET isGo = 1 WHERE orderId = #{orderId}
+    </update>
+    <select id="getOrderById" resultType="org.example.orderserver.entity.Order">
+        SELECT * FROM `order` WHERE orderId = #{orderId}
+    </select>
+    <update id="payOrder" parameterType="int">
+        UPDATE `order` SET isPay = 1 WHERE orderId = #{orderId}
+    </update>
+</mapper>

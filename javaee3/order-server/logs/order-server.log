@@ -1,0 +1,420 @@
+2023-06-17 22:08:02.477  INFO 7248 --- [main] org.reflections.Reflections              : Reflections took 30 ms to scan 1 urls, producing 3 keys and 6 values 
+2023-06-17 22:08:02.508  INFO 7248 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 4 keys and 9 values 
+2023-06-17 22:08:02.519  INFO 7248 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 3 keys and 10 values 
+2023-06-17 22:08:02.521  WARN 7248 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:08:02.529  INFO 7248 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 1 keys and 5 values 
+2023-06-17 22:08:02.536  INFO 7248 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 7 values 
+2023-06-17 22:08:02.541  INFO 7248 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 2 keys and 8 values 
+2023-06-17 22:08:02.543  WARN 7248 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:08:03.450  WARN 7248 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server] & group[DEFAULT_GROUP]
+2023-06-17 22:08:03.455  WARN 7248 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server.properties] & group[DEFAULT_GROUP]
+2023-06-17 22:08:03.456  INFO 7248 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-order-server.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-order-server,DEFAULT_GROUP'}]
+2023-06-17 22:08:03.505  INFO 7248 --- [main] o.e.orderserver.mapper.OrderMapperTest   : No active profile set, falling back to default profiles: default
+2023-06-17 22:08:04.286  INFO 7248 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4731bf41-3449-3435-8e5e-e00efb5d4b2b
+2023-06-17 22:08:04.504  INFO 7248 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:08:04.505  INFO 7248 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:08:05.219  INFO 7248 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-06-17 22:08:05.424  WARN 7248 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:08:05.424  INFO 7248 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:08:05.429  WARN 7248 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:08:05.430  INFO 7248 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:08:05.580  INFO 7248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:08:06.059  INFO 7248 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:08:06.567  INFO 7248 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property : null
+2023-06-17 22:08:06.567  INFO 7248 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-06-17 22:08:06.568  INFO 7248 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-06-17 22:08:06.582  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 8199bae4-9139-4043-b0a4-49674a7810bc
+2023-06-17 22:08:06.582  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]RpcClient init label, labels={module=naming, source=sdk}
+2023-06-17 22:08:06.583  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]RpcClient init, ServerListFactory =com.alibaba.nacos.client.naming.core.ServerListManager
+2023-06-17 22:08:06.584  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2023-06-17 22:08:06.584  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2023-06-17 22:08:06.584  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc] Try to connect to server on start up, server: {serverIp='127.0.0.1', server main port=8848}
+2023-06-17 22:08:06.718  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc] Success to connect to server [127.0.0.1:8848] on start up,connectionId=1687010886594_127.0.0.1_55844
+2023-06-17 22:08:06.718  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-06-17 22:08:06.718  INFO 7248 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]Notify connected event to listeners.
+2023-06-17 22:08:06.718  INFO 7248 --- [main] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2023-06-17 22:08:06.718  INFO 7248 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection connect
+2023-06-17 22:08:06.733  INFO 7248 --- [main] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:08:06.740  INFO 7248 --- [main] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:08:06.972  INFO 7248 --- [main] o.e.orderserver.mapper.OrderMapperTest   : Started OrderMapperTest in 5.628 seconds (JVM running for 6.996)
+2023-06-17 22:08:06.976  INFO 7248 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server+DEFAULT_GROUP
+2023-06-17 22:08:06.976  INFO 7248 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:08:06.977  INFO 7248 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server.properties+DEFAULT_GROUP
+2023-06-17 22:08:06.977  INFO 7248 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server.properties, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:08:07.264  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 22:08:07.338  INFO 7248 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]receive server push request,request=NotifySubscriberRequest,requestId=9
+2023-06-17 22:08:07.338  INFO 7248 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:08:07.338  INFO 7248 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:08:07.340  INFO 7248 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [8199bae4-9139-4043-b0a4-49674a7810bc]ack server push request,request=NotifySubscriberRequest,requestId=9
+2023-06-17 22:08:07.389  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 22:08:07.447  WARN 7248 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-06-17 22:08:07.448  WARN 7248 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-06-17 22:08:07.448  WARN 7248 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-06-17 22:08:07.448  WARN 7248 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-06-17 22:08:07.448  INFO 7248 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:08:07.456  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2023-06-17 22:08:07.456  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-06-17 22:08:07.721  INFO 7248 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : update task is stopped, service:DEFAULT_GROUP@@order-server, clusters:DEFAULT
+2023-06-17 22:08:07.782  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-06-17 22:08:07.783  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2023-06-17 22:08:07.783  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2023-06-17 22:08:07.783  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2023-06-17 22:08:08.109  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2023-06-17 22:08:08.109  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2023-06-17 22:08:08.109  WARN 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:08:08.109  WARN 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:08:08.109  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2023-06-17 22:08:08.109  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-06-17 22:08:08.110  WARN 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:08:08.110  WARN 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client ,set status to shutdown
+2023-06-17 22:08:08.110  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown  client event executor java.util.concurrent.ScheduledThreadPoolExecutor@564014d6[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2023-06-17 22:08:08.111  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1687010886594_127.0.0.1_55844
+2023-06-17 22:08:08.112  INFO 7248 --- [nacos-grpc-client-executor-7] c.a.n.c.remote.client.grpc.GrpcClient    : [1687010886594_127.0.0.1_55844]Ignore complete event,isRunning:false,isAbandon=false
+2023-06-17 22:08:08.114  INFO 7248 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6164969b[Running, pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 8]
+2023-06-17 22:08:08.114  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@794727cf[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 0]
+2023-06-17 22:08:08.114  INFO 7248 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2023-06-17 22:08:08.115  INFO 7248 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:08:08.118  INFO 7248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 22:08:08.124  INFO 7248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 22:08:38.791  INFO 21296 --- [main] org.reflections.Reflections              : Reflections took 26 ms to scan 1 urls, producing 3 keys and 6 values 
+2023-06-17 22:08:38.821  INFO 21296 --- [main] org.reflections.Reflections              : Reflections took 18 ms to scan 1 urls, producing 4 keys and 9 values 
+2023-06-17 22:08:38.830  INFO 21296 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 3 keys and 10 values 
+2023-06-17 22:08:38.831  WARN 21296 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:08:38.837  INFO 21296 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+2023-06-17 22:08:38.845  INFO 21296 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 1 keys and 7 values 
+2023-06-17 22:08:38.854  INFO 21296 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
+2023-06-17 22:08:38.856  WARN 21296 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:08:39.756  WARN 21296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server] & group[DEFAULT_GROUP]
+2023-06-17 22:08:39.761  WARN 21296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server.properties] & group[DEFAULT_GROUP]
+2023-06-17 22:08:39.762  INFO 21296 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-order-server.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-order-server,DEFAULT_GROUP'}]
+2023-06-17 22:08:39.809  INFO 21296 --- [main] o.e.orderserver.mapper.OrderMapperTest   : No active profile set, falling back to default profiles: default
+2023-06-17 22:08:40.560  INFO 21296 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4731bf41-3449-3435-8e5e-e00efb5d4b2b
+2023-06-17 22:08:40.770  INFO 21296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:08:40.772  INFO 21296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:08:41.483  INFO 21296 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-06-17 22:08:41.714  WARN 21296 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:08:41.714  INFO 21296 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:08:41.718  WARN 21296 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:08:41.719  INFO 21296 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:08:41.857  INFO 21296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:08:42.329  INFO 21296 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:08:42.881  INFO 21296 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property : null
+2023-06-17 22:08:42.881  INFO 21296 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-06-17 22:08:42.882  INFO 21296 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-06-17 22:08:42.897  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 95dc47a9-c26e-4d69-8990-66a0ac9c5649
+2023-06-17 22:08:42.897  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]RpcClient init label, labels={module=naming, source=sdk}
+2023-06-17 22:08:42.898  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]RpcClient init, ServerListFactory =com.alibaba.nacos.client.naming.core.ServerListManager
+2023-06-17 22:08:42.899  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2023-06-17 22:08:42.899  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2023-06-17 22:08:42.900  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649] Try to connect to server on start up, server: {serverIp='127.0.0.1', server main port=8848}
+2023-06-17 22:08:43.033  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649] Success to connect to server [127.0.0.1:8848] on start up,connectionId=1687010922910_127.0.0.1_55948
+2023-06-17 22:08:43.033  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-06-17 22:08:43.033  INFO 21296 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]Notify connected event to listeners.
+2023-06-17 22:08:43.033  INFO 21296 --- [main] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2023-06-17 22:08:43.033  INFO 21296 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection connect
+2023-06-17 22:08:43.051  INFO 21296 --- [main] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:08:43.060  INFO 21296 --- [main] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:08:43.347  INFO 21296 --- [main] o.e.orderserver.mapper.OrderMapperTest   : Started OrderMapperTest in 5.727 seconds (JVM running for 7.023)
+2023-06-17 22:08:43.351  INFO 21296 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server+DEFAULT_GROUP
+2023-06-17 22:08:43.352  INFO 21296 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:08:43.353  INFO 21296 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server.properties+DEFAULT_GROUP
+2023-06-17 22:08:43.353  INFO 21296 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server.properties, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:08:43.568  INFO 21296 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]receive server push request,request=NotifySubscriberRequest,requestId=10
+2023-06-17 22:08:43.568  INFO 21296 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:08:43.568  INFO 21296 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:08:43.570  INFO 21296 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [95dc47a9-c26e-4d69-8990-66a0ac9c5649]ack server push request,request=NotifySubscriberRequest,requestId=10
+2023-06-17 22:08:43.658  INFO 21296 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 22:08:43.777  INFO 21296 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 22:08:43.828  WARN 21296 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-06-17 22:08:43.828  WARN 21296 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-06-17 22:08:43.828  WARN 21296 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-06-17 22:08:43.828  WARN 21296 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-06-17 22:08:43.829  INFO 21296 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:08:43.837  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2023-06-17 22:08:43.837  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-06-17 22:08:44.045  INFO 21296 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : update task is stopped, service:DEFAULT_GROUP@@order-server, clusters:DEFAULT
+2023-06-17 22:08:44.153  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-06-17 22:08:44.153  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2023-06-17 22:08:44.154  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2023-06-17 22:08:44.154  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2023-06-17 22:08:44.478  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2023-06-17 22:08:44.479  WARN 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:08:44.479  WARN 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-06-17 22:08:44.479  WARN 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:08:44.479  WARN 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-06-17 22:08:44.479  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2023-06-17 22:08:44.480  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client ,set status to shutdown
+2023-06-17 22:08:44.480  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown  client event executor java.util.concurrent.ScheduledThreadPoolExecutor@156c17fe[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2023-06-17 22:08:44.480  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1687010922910_127.0.0.1_55948
+2023-06-17 22:08:44.481  INFO 21296 --- [nacos-grpc-client-executor-8] c.a.n.c.remote.client.grpc.GrpcClient    : [1687010922910_127.0.0.1_55948]Ignore complete event,isRunning:false,isAbandon=false
+2023-06-17 22:08:44.482  INFO 21296 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@2e1333bf[Running, pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9]
+2023-06-17 22:08:44.482  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@ba0d0a8[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 0]
+2023-06-17 22:08:44.483  INFO 21296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2023-06-17 22:08:44.484  INFO 21296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:08:44.487  INFO 21296 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 22:08:44.493  INFO 21296 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 22:09:29.241  INFO 12804 --- [main] org.reflections.Reflections              : Reflections took 25 ms to scan 1 urls, producing 3 keys and 6 values 
+2023-06-17 22:09:29.273  INFO 12804 --- [main] org.reflections.Reflections              : Reflections took 21 ms to scan 1 urls, producing 4 keys and 9 values 
+2023-06-17 22:09:29.281  INFO 12804 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 3 keys and 10 values 
+2023-06-17 22:09:29.282  WARN 12804 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:09:29.289  INFO 12804 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 5 values 
+2023-06-17 22:09:29.295  INFO 12804 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 7 values 
+2023-06-17 22:09:29.304  INFO 12804 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 2 keys and 8 values 
+2023-06-17 22:09:29.306  WARN 12804 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:09:30.229  WARN 12804 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server] & group[DEFAULT_GROUP]
+2023-06-17 22:09:30.235  WARN 12804 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server.properties] & group[DEFAULT_GROUP]
+2023-06-17 22:09:30.236  INFO 12804 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-order-server.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-order-server,DEFAULT_GROUP'}]
+2023-06-17 22:09:30.275  INFO 12804 --- [main] o.e.orderserver.mapper.OrderMapperTest   : No active profile set, falling back to default profiles: default
+2023-06-17 22:09:31.055  INFO 12804 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4731bf41-3449-3435-8e5e-e00efb5d4b2b
+2023-06-17 22:09:31.263  INFO 12804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:09:31.264  INFO 12804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:09:31.996  INFO 12804 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-06-17 22:09:32.222  WARN 12804 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:09:32.222  INFO 12804 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:09:32.228  WARN 12804 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:09:32.228  INFO 12804 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:09:32.357  INFO 12804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:09:32.834  INFO 12804 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:09:33.388  INFO 12804 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property : null
+2023-06-17 22:09:33.389  INFO 12804 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-06-17 22:09:33.389  INFO 12804 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-06-17 22:09:33.405  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of f1523624-b9ed-4042-bcb6-7750677c3142
+2023-06-17 22:09:33.405  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]RpcClient init label, labels={module=naming, source=sdk}
+2023-06-17 22:09:33.406  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]RpcClient init, ServerListFactory =com.alibaba.nacos.client.naming.core.ServerListManager
+2023-06-17 22:09:33.406  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2023-06-17 22:09:33.407  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2023-06-17 22:09:33.407  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142] Try to connect to server on start up, server: {serverIp='127.0.0.1', server main port=8848}
+2023-06-17 22:09:33.541  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142] Success to connect to server [127.0.0.1:8848] on start up,connectionId=1687010973418_127.0.0.1_56047
+2023-06-17 22:09:33.541  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-06-17 22:09:33.541  INFO 12804 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]Notify connected event to listeners.
+2023-06-17 22:09:33.541  INFO 12804 --- [main] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2023-06-17 22:09:33.541  INFO 12804 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection connect
+2023-06-17 22:09:33.574  INFO 12804 --- [main] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:09:33.582  INFO 12804 --- [main] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:09:33.827  INFO 12804 --- [main] o.e.orderserver.mapper.OrderMapperTest   : Started OrderMapperTest in 5.764 seconds (JVM running for 7.076)
+2023-06-17 22:09:33.830  INFO 12804 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server+DEFAULT_GROUP
+2023-06-17 22:09:33.831  INFO 12804 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:09:33.831  INFO 12804 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server.properties+DEFAULT_GROUP
+2023-06-17 22:09:33.832  INFO 12804 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server.properties, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:09:34.102  INFO 12804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 22:09:34.112  INFO 12804 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]receive server push request,request=NotifySubscriberRequest,requestId=11
+2023-06-17 22:09:34.112  INFO 12804 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:09:34.112  INFO 12804 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:09:34.114  INFO 12804 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.common.remote.client   : [f1523624-b9ed-4042-bcb6-7750677c3142]ack server push request,request=NotifySubscriberRequest,requestId=11
+2023-06-17 22:09:34.225  INFO 12804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 22:09:34.265  WARN 12804 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-06-17 22:09:34.265  WARN 12804 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-06-17 22:09:34.266  WARN 12804 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-06-17 22:09:34.266  WARN 12804 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-06-17 22:09:34.267  INFO 12804 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:09:34.275  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2023-06-17 22:09:34.275  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-06-17 22:09:34.560  INFO 12804 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : update task is stopped, service:DEFAULT_GROUP@@order-server, clusters:DEFAULT
+2023-06-17 22:09:34.607  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-06-17 22:09:34.607  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2023-06-17 22:09:34.607  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2023-06-17 22:09:34.607  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2023-06-17 22:09:34.932  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2023-06-17 22:09:34.932  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2023-06-17 22:09:34.932  WARN 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:09:34.932  WARN 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:09:34.932  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-06-17 22:09:34.933  WARN 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:09:34.933  WARN 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client ,set status to shutdown
+2023-06-17 22:09:34.933  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown  client event executor java.util.concurrent.ScheduledThreadPoolExecutor@26726850[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2023-06-17 22:09:34.934  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1687010973418_127.0.0.1_56047
+2023-06-17 22:09:34.935  INFO 12804 --- [nacos-grpc-client-executor-7] c.a.n.c.remote.client.grpc.GrpcClient    : [1687010973418_127.0.0.1_56047]Ignore complete event,isRunning:false,isAbandon=false
+2023-06-17 22:09:34.936  INFO 12804 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@222dda[Running, pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 8]
+2023-06-17 22:09:34.936  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@4ba0737[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 0]
+2023-06-17 22:09:34.937  INFO 12804 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2023-06-17 22:09:34.937  INFO 12804 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:09:34.940  INFO 12804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 22:09:34.946  INFO 12804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 22:09:46.364  INFO 43312 --- [main] org.reflections.Reflections              : Reflections took 25 ms to scan 1 urls, producing 3 keys and 6 values 
+2023-06-17 22:09:46.396  INFO 43312 --- [main] org.reflections.Reflections              : Reflections took 18 ms to scan 1 urls, producing 4 keys and 9 values 
+2023-06-17 22:09:46.404  INFO 43312 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 3 keys and 10 values 
+2023-06-17 22:09:46.406  WARN 43312 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:09:46.413  INFO 43312 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+2023-06-17 22:09:46.421  INFO 43312 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 1 keys and 7 values 
+2023-06-17 22:09:46.429  INFO 43312 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
+2023-06-17 22:09:46.431  WARN 43312 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:09:47.330  WARN 43312 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server] & group[DEFAULT_GROUP]
+2023-06-17 22:09:47.336  WARN 43312 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server.properties] & group[DEFAULT_GROUP]
+2023-06-17 22:09:47.336  INFO 43312 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-order-server.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-order-server,DEFAULT_GROUP'}]
+2023-06-17 22:09:47.384  INFO 43312 --- [main] o.e.orderserver.mapper.OrderMapperTest   : No active profile set, falling back to default profiles: default
+2023-06-17 22:09:48.190  INFO 43312 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4731bf41-3449-3435-8e5e-e00efb5d4b2b
+2023-06-17 22:09:48.395  INFO 43312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:09:48.396  INFO 43312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:09:49.097  INFO 43312 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-06-17 22:09:49.309  WARN 43312 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:09:49.309  INFO 43312 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:09:49.315  WARN 43312 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:09:49.316  INFO 43312 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:09:49.443  INFO 43312 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:09:49.866  INFO 43312 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:09:50.361  INFO 43312 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property : null
+2023-06-17 22:09:50.362  INFO 43312 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-06-17 22:09:50.362  INFO 43312 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-06-17 22:09:50.376  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 3a630ae2-2e23-45dd-8f8a-6ea99a531f7e
+2023-06-17 22:09:50.376  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]RpcClient init label, labels={module=naming, source=sdk}
+2023-06-17 22:09:50.378  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]RpcClient init, ServerListFactory =com.alibaba.nacos.client.naming.core.ServerListManager
+2023-06-17 22:09:50.378  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2023-06-17 22:09:50.378  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2023-06-17 22:09:50.379  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e] Try to connect to server on start up, server: {serverIp='127.0.0.1', server main port=8848}
+2023-06-17 22:09:50.506  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e] Success to connect to server [127.0.0.1:8848] on start up,connectionId=1687010990385_127.0.0.1_56134
+2023-06-17 22:09:50.506  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-06-17 22:09:50.506  INFO 43312 --- [main] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2023-06-17 22:09:50.506  INFO 43312 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]Notify connected event to listeners.
+2023-06-17 22:09:50.506  INFO 43312 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection connect
+2023-06-17 22:09:50.519  INFO 43312 --- [main] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:09:50.527  INFO 43312 --- [main] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:09:50.787  INFO 43312 --- [main] o.e.orderserver.mapper.OrderMapperTest   : Started OrderMapperTest in 5.558 seconds (JVM running for 6.852)
+2023-06-17 22:09:50.791  INFO 43312 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server+DEFAULT_GROUP
+2023-06-17 22:09:50.792  INFO 43312 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:09:50.793  INFO 43312 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server.properties+DEFAULT_GROUP
+2023-06-17 22:09:50.793  INFO 43312 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server.properties, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:09:51.019  INFO 43312 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]receive server push request,request=NotifySubscriberRequest,requestId=12
+2023-06-17 22:09:51.019  INFO 43312 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:09:51.020  INFO 43312 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:09:51.021  INFO 43312 --- [nacos-grpc-client-executor-4] com.alibaba.nacos.common.remote.client   : [3a630ae2-2e23-45dd-8f8a-6ea99a531f7e]ack server push request,request=NotifySubscriberRequest,requestId=12
+2023-06-17 22:09:51.092  INFO 43312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 22:09:51.212  INFO 43312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 22:09:51.263  WARN 43312 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-06-17 22:09:51.263  WARN 43312 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-06-17 22:09:51.263  WARN 43312 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-06-17 22:09:51.263  WARN 43312 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-06-17 22:09:51.263  INFO 43312 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:09:51.270  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2023-06-17 22:09:51.270  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-06-17 22:09:51.522  INFO 43312 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : update task is stopped, service:DEFAULT_GROUP@@order-server, clusters:DEFAULT
+2023-06-17 22:09:51.599  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-06-17 22:09:51.599  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2023-06-17 22:09:51.599  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2023-06-17 22:09:51.599  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2023-06-17 22:09:51.927  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2023-06-17 22:09:51.927  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2023-06-17 22:09:51.927  WARN 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:09:51.927  WARN 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:09:51.927  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2023-06-17 22:09:51.927  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2023-06-17 22:09:51.927  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-06-17 22:09:51.928  WARN 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:09:51.928  WARN 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client ,set status to shutdown
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown  client event executor java.util.concurrent.ScheduledThreadPoolExecutor@1998ad12[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2023-06-17 22:09:51.928  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1687010990385_127.0.0.1_56134
+2023-06-17 22:09:51.930  INFO 43312 --- [nacos-grpc-client-executor-6] c.a.n.c.remote.client.grpc.GrpcClient    : [1687010990385_127.0.0.1_56134]Ignore complete event,isRunning:false,isAbandon=false
+2023-06-17 22:09:51.931  INFO 43312 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@76d1c5cb[Running, pool size = 7, active threads = 0, queued tasks = 0, completed tasks = 7]
+2023-06-17 22:09:51.931  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@166f6e22[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 0]
+2023-06-17 22:09:51.931  INFO 43312 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2023-06-17 22:09:51.932  INFO 43312 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:09:51.935  INFO 43312 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 22:09:51.941  INFO 43312 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 22:12:36.146  INFO 37436 --- [main] org.reflections.Reflections              : Reflections took 25 ms to scan 1 urls, producing 3 keys and 6 values 
+2023-06-17 22:12:36.178  INFO 37436 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 4 keys and 9 values 
+2023-06-17 22:12:36.185  INFO 37436 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 3 keys and 10 values 
+2023-06-17 22:12:36.186  WARN 37436 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:12:36.193  INFO 37436 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+2023-06-17 22:12:36.199  INFO 37436 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 7 values 
+2023-06-17 22:12:36.209  INFO 37436 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 2 keys and 8 values 
+2023-06-17 22:12:36.210  WARN 37436 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+2023-06-17 22:12:37.102  WARN 37436 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server] & group[DEFAULT_GROUP]
+2023-06-17 22:12:37.107  WARN 37436 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[order-server.properties] & group[DEFAULT_GROUP]
+2023-06-17 22:12:37.108  INFO 37436 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-order-server.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-order-server,DEFAULT_GROUP'}]
+2023-06-17 22:12:37.155  INFO 37436 --- [main] o.e.o.mapper.OrderShipMapperTest         : No active profile set, falling back to default profiles: default
+2023-06-17 22:12:37.918  INFO 37436 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4731bf41-3449-3435-8e5e-e00efb5d4b2b
+2023-06-17 22:12:38.122  INFO 37436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:12:38.124  INFO 37436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-17 22:12:38.820  INFO 37436 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-06-17 22:12:39.043  WARN 37436 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:12:39.043  INFO 37436 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:12:39.047  WARN 37436 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-06-17 22:12:39.048  INFO 37436 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-17 22:12:39.184  INFO 37436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:12:39.646  INFO 37436 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:12:40.181  INFO 37436 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property : null
+2023-06-17 22:12:40.182  INFO 37436 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-06-17 22:12:40.182  INFO 37436 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-06-17 22:12:40.197  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of f5a13202-81c8-4037-b90c-bf67899e36a3
+2023-06-17 22:12:40.197  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]RpcClient init label, labels={module=naming, source=sdk}
+2023-06-17 22:12:40.199  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]RpcClient init, ServerListFactory =com.alibaba.nacos.client.naming.core.ServerListManager
+2023-06-17 22:12:40.200  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2023-06-17 22:12:40.200  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2023-06-17 22:12:40.200  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3] Try to connect to server on start up, server: {serverIp='127.0.0.1', server main port=8848}
+2023-06-17 22:12:40.335  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3] Success to connect to server [127.0.0.1:8848] on start up,connectionId=1687011160211_127.0.0.1_56273
+2023-06-17 22:12:40.335  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-06-17 22:12:40.335  INFO 37436 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]Notify connected event to listeners.
+2023-06-17 22:12:40.335  INFO 37436 --- [main] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2023-06-17 22:12:40.335  INFO 37436 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection connect
+2023-06-17 22:12:40.354  INFO 37436 --- [main] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:12:40.362  INFO 37436 --- [main] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server@@DEFAULT -> []
+2023-06-17 22:12:40.636  INFO 37436 --- [main] o.e.o.mapper.OrderShipMapperTest         : Started OrderShipMapperTest in 5.622 seconds (JVM running for 6.944)
+2023-06-17 22:12:40.641  INFO 37436 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server+DEFAULT_GROUP
+2023-06-17 22:12:40.642  INFO 37436 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:12:40.643  INFO 37436 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] order-server.properties+DEFAULT_GROUP
+2023-06-17 22:12:40.643  INFO 37436 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=order-server.properties, group=DEFAULT_GROUP, cnt=1
+2023-06-17 22:12:40.907  INFO 37436 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]receive server push request,request=NotifySubscriberRequest,requestId=13
+2023-06-17 22:12:40.908  INFO 37436 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:12:40.908  INFO 37436 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@order-server -> []
+2023-06-17 22:12:40.909  INFO 37436 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [f5a13202-81c8-4037-b90c-bf67899e36a3]ack server push request,request=NotifySubscriberRequest,requestId=13
+2023-06-17 22:12:40.945  INFO 37436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 22:12:41.065  INFO 37436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 22:12:41.105  WARN 37436 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-06-17 22:12:41.105  WARN 37436 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-06-17 22:12:41.105  WARN 37436 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-06-17 22:12:41.106  WARN 37436 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-06-17 22:12:41.106  INFO 37436 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-06-17 22:12:41.115  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2023-06-17 22:12:41.116  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-06-17 22:12:41.339  INFO 37436 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : update task is stopped, service:DEFAULT_GROUP@@order-server, clusters:DEFAULT
+2023-06-17 22:12:41.446  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-06-17 22:12:41.446  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2023-06-17 22:12:41.446  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2023-06-17 22:12:41.446  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2023-06-17 22:12:41.776  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2023-06-17 22:12:41.776  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2023-06-17 22:12:41.776  WARN 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:12:41.776  WARN 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:12:41.776  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2023-06-17 22:12:41.776  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-06-17 22:12:41.777  WARN 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-06-17 22:12:41.777  WARN 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client ,set status to shutdown
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown  client event executor java.util.concurrent.ScheduledThreadPoolExecutor@440ae1be[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2023-06-17 22:12:41.777  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1687011160211_127.0.0.1_56273
+2023-06-17 22:12:41.779  INFO 37436 --- [nacos-grpc-client-executor-8] c.a.n.c.remote.client.grpc.GrpcClient    : [1687011160211_127.0.0.1_56273]Ignore complete event,isRunning:false,isAbandon=false
+2023-06-17 22:12:41.780  INFO 37436 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@2e7463f6[Running, pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9]
+2023-06-17 22:12:41.780  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@5ee893fc[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 0]
+2023-06-17 22:12:41.780  INFO 37436 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2023-06-17 22:12:41.781  INFO 37436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-06-17 22:12:41.783  INFO 37436 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 22:12:41.789  INFO 37436 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

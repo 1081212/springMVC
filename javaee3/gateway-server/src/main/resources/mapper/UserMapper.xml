@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.gateway.mapper.UserMapper">
+
+    <select id="getUserById" resultType="org.example.gateway.entity.User">
+        SELECT * FROM user1 WHERE uid = #{id}
+    </select>
+
+    <select id="getAllUser" resultType="org.example.gateway.entity.User">
+        SELECT * FROM user1
+    </select>
+
+    <select id="getUserByUsername" resultType="org.example.gateway.entity.User">
+        SELECT * FROM user1 WHERE username = #{username}
+    </select>
+
+    <insert id="insertUser" parameterType="org.example.gateway.entity.User">
+        INSERT INTO user1 (username, password) VALUES (#{username}, #{password})
+    </insert>
+
+
+
+
+</mapper>

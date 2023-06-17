@@ -1,0 +1,67 @@
+#端口号
+server:
+  port: 8080
+#nacos的注册地址和配置地址
+spring:
+  redis:
+    host: 127.0.0.1
+    database: 3
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+    #开启sentinel
+    sentinel:
+      enabled: true
+      transport:
+        dashboard: 127.0.0.1:8849 # 连接dashboard
+        port: 8719
+    gateway:
+      global-filters:
+        - JwtAuthorizationFilter # 自定义过滤器的名称
+      discovery:
+        locator:
+          enabled:true
+      routes:
+        - id: user-server
+          uri: lb://user-server  # 目标服务1的URL
+          predicates:
+            - Path=/user-server/**  # 请求路径匹配规则
+
+        - id: admin-server
+          uri: lb://admin-server  # 目标服务2的URL
+          predicates:
+            - Path=/admin-server/**  # 请求路径匹配规则
+
+        - id: auth-server
+          uri: lb://auth-server
+          predicates:
+            - Path=/api/login
+
+        - id: ship-server
+          uri: lb://ship-server  # 目标服务1的URL
+          predicates:
+            - Path=/ship-server/**  # 请求路径匹配规则
+
+        - id: order-server
+          uri: lb://order-server  # 目标服务2的URL
+          predicates:
+            - Path=/order-server/**  # 请求路径匹配规则
+  #服务名称
+  application:
+    name: gateway
+  datasource:
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/csbms?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#开启feign的降级
+feign:
+  hystrix:
+    enabled: true
+
