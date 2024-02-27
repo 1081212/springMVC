@@ -710,7 +710,7 @@ File->Project Structure->Modules->对应的server->Dependencies-> <Module source
 
 3、数据库文件已上传至master分支，##作业一、二使用ship.sql，作业三、四使用ship2.sql##
 
-4、感谢所学，收获颇多。
+
 
   
 
